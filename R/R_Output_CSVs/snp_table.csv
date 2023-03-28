@@ -1,0 +1,141 @@
+,Type,Variant Type,Change Protein,Gene name,Functional annotation,Host ID
+1,del,frameshift_variant,p.Leu336fs,metC,bifunctional cystathionine gamma-lyase/homocysteine desulfhydrase,1415
+2,snp,missense_variant,p.Thr2Ser,,DUF4064 domain-containing protein,1676
+3,snp,missense_variant,p.Val232Ile,glpG,rhomboid family intramembrane serine protease,1676
+4,snp,stop_gained,p.Leu65*,tarI2,Ribitol-5-phosphate cytidylyltransferase 2,1992
+5,snp,synonymous_variant,p.Tyr69Tyr,araC,AraC family transcriptional regulator,1992
+6,snp,missense_variant,p.Ala30Gly,comGF,competence protein ComGF,1992
+7,snp,synonymous_variant,p.Asp57Asp,,AAA family ATPase,3344
+8,snp,synonymous_variant,p.Gln367Gln,spoVV,histidine transporter,3344
+9,snp,missense_variant,p.Phe379Leu,argG,argininosuccinate synthase,3344
+10,snp,synonymous_variant,p.Gly356Gly,asnS,asparagine--tRNA ligase,3344
+11,snp,missense_variant,p.Ile967Val,,Peptidase S74 domain-containing protein,3344
+12,snp,missense_variant,p.Val103Ala,pxpC,allophanate hydrolase,3344
+13,snp,missense_variant,p.Asn31Asp,,DUF2829 domain-containing protein,3344
+14,snp,missense_variant,p.His456Gln,tex,RNA-binding transcriptional accessory protein,3344
+15,mnp,missense_variant,p.Ser818Asp,,fibronectin-binding protein FnbA,3344
+16,snp,synonymous_variant,p.Ile125Ile,ychF,redox-regulated ATPase YchF,3997
+17,snp,synonymous_variant,p.Asp435Asp,treC,"alpha"", ""alpha-phosphotrehalase"")",3997
+18,snp,synonymous_variant,p.Val124Val,purL,phosphoribosylformylglycinamidine synthase subunit PurL,3997
+19,snp,missense_variant,p.Thr271Ile,isdE,iron-regulated surface determinant protein E,3997
+20,snp,missense_variant,p.Ala839Ser,sbcC,Nuclease SbcCD subunit C,3997
+21,snp,synonymous_variant,p.Val145Val,birA,biotin--[acetyl-CoA-carboxylase] ligase,3997
+22,snp,missense_variant,p.Thr205Met,scpA,Segregation and condensation protein A,3997
+23,snp,synonymous_variant,p.Leu50Leu,clpX,ATP-dependent Clp protease ATP-binding subunit ClpX,3997
+24,del,frameshift_variant,p.Lys85fs,,Exotoxin,3997
+25,snp,missense_variant,p.Ser257Arg,comP,histidine kinase,3997
+26,snp,missense_variant,p.Ala416Val,gatB,Asp-tRNA(Asn)/Glu-tRNA(Gln) amidotransferase subunit GatB,3997
+27,snp,missense_variant,p.Arg393Ser,,ATP-binding protein,3997
+28,snp,missense_variant,p.Arg60Cys,,UPF0457 protein SAV2173,3997
+29,snp,missense_variant,p.Lys57Met,rpsJ,30S ribosomal protein S10,3997
+30,snp,missense_variant,p.Val218Ala,feoB,ferrous iron transport protein B,3997
+31,snp,missense_variant,p.Ser149Leu,isaB,immunodominant staphylococcal antigen IsaB,3997
+32,snp,missense_variant,p.Val1702Ala,lys2b,non-ribosomal peptide synthetase,420
+33,snp,missense_variant,p.Tyr895His,esaA,type VII secretion system protein EsaA,420
+34,snp,missense_variant,p.Thr208Ala,,carbohydrate kinase,420
+35,snp,synonymous_variant,p.Ser80Ser,,tandem-type lipoprotein,420
+36,snp,missense_variant,p.Val143Ala,gmpC,dipeptide ABC transporter glycylmethionine-binding lipoprotein,420
+37,snp,missense_variant,p.Leu296Pro,ldcC,lysine decarboxylase,420
+38,snp,synonymous_variant,p.Ala211Ala,ilvE,branched-chain amino acid aminotransferase,420
+39,snp,synonymous_variant,p.Ser744Ser,sdrC,hydrolase,420
+40,complex,synonymous_variant,p.749,sdrC,hydrolase,420
+41,snp,synonymous_variant,p.Asp751Asp,sdrC,hydrolase,420
+42,snp,missense_variant,p.Lys47Asn,pfkB,1-phosphofructokinase,420
+43,snp,synonymous_variant,p.Val37Val,prfB,peptide chain release factor 2,420
+44,snp,missense_variant,p.Gly102Glu,tpiA,triose-phosphate isomerase,420
+45,snp,missense_variant,p.Arg477Gln,clpB,ATP-dependent chaperone ClpB,420
+46,snp,missense_variant,p.Ala40Pro,isdD,iron-regulated surface determinant protein IsdD,420
+47,snp,synonymous_variant,p.Ala187Ala,isdF,hemin ABC transporter permease protein IsdF,420
+48,snp,missense_variant,p.Ala32Val,pyrC,dihydroorotase,420
+49,snp,synonymous_variant,p.Pro244Pro,coaBC,bifunctional phosphopantothenoylcysteine decarboxylase/phosphopantothenate--cysteine ligase CoaBC,420
+50,snp,synonymous_variant,p.Ser315Ser,,Lipoprotein,420
+51,ins,frameshift_variant,p.Ile343fs,mutL,DNA mismatch repair endonuclease MutL,420
+52,snp,missense_variant,p.Val16Leu,katB,Catalase-like protein,420
+53,snp,missense_variant,p.Gly115Asp,trpC,indole-3-glycerol phosphate synthase TrpC,420
+54,snp,synonymous_variant,p.Ser178Ser,cvfB,RNA-binding virulence regulatory protein CvfB,420
+55,snp,synonymous_variant,p.Gly2812Gly,ebh,hyperosmolarity resistance protein Ebh,420
+56,snp,synonymous_variant,p.Leu172Leu,yoqJ,UPF0398 protein SAOUHSC_01463,420
+57,snp,synonymous_variant,p.Asn54Asn,yugP,zinc metallopeptidase,420
+58,snp,synonymous_variant,p.Val300Val,nIF3,Nif3-like dinuclear metal center hexameric protein,420
+59,snp,synonymous_variant,p.Ser188Ser,udk,uridine kinase,420
+60,snp,missense_variant,p.Gly158Ser,gloB,Lactamase-B domain-containing protein,420
+61,snp,missense_variant,p.Ala5Val,vraR,two-component system response regulator VraR,420
+62,snp,synonymous_variant,p.Ser102Ser,vraS,Sensor protein VraS,420
+63,ins,frameshift_variant,p.Ile476fs,eap,extracellular adherence protein Eap/Map,420
+64,del,conservative_inframe_deletion,p.Gln158_Glu161del,sacC,sucrose-6-phosphate hydrolase,420
+65,ins,disruptive_inframe_insertion,p.Gly191dup,ilvA,threonine ammonia-lyase IlvA,420
+66,snp,missense_variant,p.Cys38Tyr,rho,transcription termination factor Rho,420
+67,snp,synonymous_variant,p.Ala425Ala,glmS,glutamine--fructose-6-phosphate transaminase (isomerizing),420
+68,snp,synonymous_variant,p.Ile340Ile,yhgE,phage infection protein,420
+69,snp,missense_variant,p.Met84Thr,yzzA,general stress protein,420
+70,snp,synonymous_variant,p.Ser842Ser,fnbB,fibronectin-binding protein FnbB,420
+71,snp,synonymous_variant,p.Ile160Ile,nfnB,Putative NAD(P)H nitroreductase SACOL2534,420
+72,snp,synonymous_variant,p.Ser7Ser,,thiol reductase thioredoxin,420
+73,snp,synonymous_variant,p.Asn98Asn,trxB,Putative flavoprotein monooxygenase,420
+74,snp,missense_variant,p.Pro601Leu,,peptide ABC transporter permease,420
+75,snp,synonymous_variant,p.Ala101Ala,ptsN,PTS mannose transporter subunit IIABC,420
+76,snp,missense_variant,p.Gly122Asp,ssuD,LLM class flavin-dependent oxidoreductase,4681
+77,snp,missense_variant,p.Cys41Gly,fusA,elongation factor G,4681
+78,snp,missense_variant,p.Glu473Asp,dnaG,DNA primase,4681
+79,snp,missense_variant,p.Asp251Gly,clpX,ATP-dependent Clp protease ATP-binding subunit ClpX,4681
+80,snp,missense_variant,p.Ser358Asn,murC,UDP-N-acetylmuramate--L-alanine ligase,4681
+81,snp,synonymous_variant,p.Gly135Gly,malG,sugar ABC transporter permease,4875
+82,snp,missense_variant,p.Arg147Cys,tcyP,L-cystine transporter,4875
+83,snp,missense_variant,p.Asp693Gly,sdrC,MSCRAMM family adhesin SdrC,4875
+84,snp,missense_variant,p.Ala5Val,pdxI,oxidoreductase,4875
+85,snp,synonymous_variant,p.Val29Val,adhP,alcohol dehydrogenase AdhP,4875
+86,snp,missense_variant,p.Pro14Ser,pptA,4-oxalocrotonate tautomerase,4875
+87,snp,synonymous_variant,p.Lys178Lys,ypbB,HTH-40 domain-containing protein,4875
+88,snp,missense_variant,p.Arg372Cys,camS,CamS sex pheromone cAM373 precursor,4875
+89,snp,missense_variant,p.Ala428Thr,adhE,Putative aldehyde dehydrogenase,4875
+90,snp,missense_variant,p.Ile35Phe,rplV,50S ribosomal protein L22,4875
+91,snp,missense_variant,p.Ala171Val,hrtB,Putative hemin transport system permease protein HrtB,4875
+92,snp,missense_variant,p.Lys52Arg,sirA,staphyloferrin B ABC transporter substrate-binding protein SirA,5047
+93,snp,missense_variant,p.Ala582Pro,clpC,ATP-dependent Clp protease ATP-binding subunit ClpC,5047
+94,snp,synonymous_variant,p.Gly58Gly,fepC,iron-enterobactin transporter ATP-binding protein,5047
+95,snp,synonymous_variant,p.Val82Val,osmF,glycine/betaine ABC transporter permease,5047
+96,snp,missense_variant,p.Asp327Tyr,metN2,Methionine import ATP-binding protein MetN 2,5047
+97,snp,synonymous_variant,p.Asp296Asp,carA,carbamoyl phosphate synthase small subunit,5047
+98,snp,missense_variant,p.Pro421Ser,acsA,acetate--CoA ligase,5047
+99,snp,missense_variant,p.Ala152Val,atpA,F0F1 ATP synthase subunit alpha,5047
+100,snp,missense_variant,p.Gly62Cys,lacE,lactose-specific PTS transporter subunit EIIC,5047
+101,snp,missense_variant,p.Val333Ile,bioA,adenosylmethionine--8-amino-7-oxononanoate transaminase,5047
+102,snp,missense_variant,p.Pro551Leu,metG,methionine--tRNA ligase,5060
+103,snp,synonymous_variant,p.Ala159Ala,,GMP reductase,5060
+104,snp,missense_variant,p.Val500Ile,ftsK,DNA translocase FtsK,5060
+105,snp,missense_variant,p.Lys57Glu,rpsJ,30S ribosomal protein S10,5060
+106,snp,missense_variant,p.Ser1319Phe,ebhA,Extracellular matrix-binding protein EbhA,5519
+107,snp,synonymous_variant,p.Asp373Asp,polA,DNA polymerase I,5519
+108,snp,missense_variant,p.Ala430Glu,nirB,nitrite reductase large subunit,5519
+109,del,frameshift_variant,p.Leu763fs,mfd,transcription-repair coupling factor,5562
+110,snp,missense_variant,p.Gln213Lys,isdA,iron-regulated surface determinant protein A,5562
+111,snp,missense_variant,p.Thr176Ile,ymdB,metallophosphoesterase,5562
+112,snp,missense_variant,p.Ala162Thr,yybS,putative membrane protein,5728
+113,snp,missense_variant,p.Gly129Val,dnaB,replicative DNA helicase,5728
+114,snp,missense_variant,p.Pro262Leu,cap8G,type 8 capsular polysaccharide synthesis protein Cap8G,5728
+115,snp,missense_variant,p.Ala570Gly,coa,staphylocoagulase,5728
+116,snp,missense_variant,p.Asn67Asp,,ABC transporter,5728
+117,snp,synonymous_variant,p.Glu171Glu,hsdS,restriction endonuclease subunit S,5728
+118,snp,missense_variant,p.Thr88Ala,rsmC,class I SAM-dependent methyltransferase,5728
+119,snp,stop_gained,p.Trp119*,proP,Putative proline/betaine transporter,5728
+120,ins,frameshift_variant,p.Val4fs,,DUF5067 domain-containing protein,5728
+121,snp,missense_variant,p.Pro92Thr,priA,primosomal protein N',5728
+122,snp,missense_variant,p.Asp198Gly,,protein-serine/threonine phosphatase Stp1,5728
+123,snp,missense_variant,p.Leu83Pro,yqgV,Thiamine-BP domain-containing protein,5728
+124,snp,missense_variant,p.Pro62Ser,nth,endonuclease III,5728
+125,snp,missense_variant,p.Pro15Ser,era,GTPase Era,5728
+126,snp,stop_gained,p.Gly205*,mntH,divalent metal cation transporter,5728
+127,snp,missense_variant,p.Ala180Ser,frvX,peptidase M28,5728
+128,snp,missense_variant,p.Gly368Glu,leuS,leucine--tRNA ligase,5728
+129,snp,missense_variant,p.Ala139Ser,,65 kDa membrane protein,5728
+130,snp,missense_variant,p.His183Arg,lukG,bi-component leukocidin LukGH subunit G,5728
+131,snp,missense_variant,p.Asp188Gly,sigB,RNA polymerase sigma factor SigB,5728
+132,snp,missense_variant,p.Asp37Asn,rho,transcription termination factor Rho,5728
+133,snp,missense_variant,p.Arg954Lys,,DUF1542 domain-containing protein,5728
+134,snp,missense_variant,p.Lys57Met,rpsJ,30S ribosomal protein S10,5728
+135,snp,stop_gained,p.Glu582*,rsp,AraC family transcriptional regulator Rsp,5728
+136,snp,synonymous_variant,p.Val8Val,focA,formate/nitrite transporter,5728
+137,snp,synonymous_variant,p.Asn1165Asn,,Surface protein G,5728
+138,snp,missense_variant,p.Asp258Gly,rhaT,EamA family transporter,5728
+139,ins,frameshift_variant,p.Val179fs,,FtsX-like permease family protein,5728
+140,snp,missense_variant,p.Gln24Pro,rsmG,16S rRNA (guanine(527)-N(7))-methyltransferase RsmG,5728
