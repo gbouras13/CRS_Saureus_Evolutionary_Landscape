@@ -1,9 +1,18 @@
 CRS_Saureus_Evolutionary_Landscape
 ====================================
-This repository holds the code base for Houtak & Bouras et al, 'The Intra-Host Evolutionary Landscape And Pathoadaptation Of Persistent *Staphylococcus aureus* In Chronic Rhinosinusitis' (doi TBA). It was a combined effort with [ghs101](https://github.com/ghs101) who lead the project. If you find any of this code useful for your research, feel free to copy, use or modify - but please cite the pre-print!
+
+Introduction
+--------------------
+
+This repository holds the code base for Houtak & Bouras et al, 'The Intra-Host Evolutionary Landscape And Pathoadaptation Of Persistent *Staphylococcus aureus* In Chronic Rhinosinusitis' (doi TBA). 
+
+This was a combined effort with [ghs101](https://github.com/ghs101), who lead the project. If you find any of this code useful for your research, feel free to copy, use or modify - but please cite the pre-print!
+
+You will need to have conda & snakemake installed to run the bulk of the analysis - the environments in the snakemake pipelines should automatically install. I have not included detailed installation instructions for the miscellaneous scripts or the structural locus deep dive - the instructions are contained in the relevant shell scripts (simple conda environments are recommended). For R, there are no installation instructions, but any package not found on CRAN or Bioconductor will have detailed installation instructions commented out (e.g. gggenomes) in the relevant script.   
 
 Table of Contents
 -----------
+- [Introduction](#Introduction)
 - [Assemblies](#Assemblies)
 - [Chromosome Analysis Snakemake Pipeline](#Chromosome_Analysis_Snakemake_Pipeline)
 - [Other Miscellaneous Bioinformatics Scripts](#Other_Miscellaneous_Bioinformatics_Scripts)
@@ -71,8 +80,8 @@ Other Miscellaneous Bioinformatics Scripts
 
 There are a couple of other miscellaneous scripts that are not in the Snakemake pipleine (had some trouble with HPC installs!)
 
-1. [Scoary](https://github.com/AdmiralenOla/Scoary) analysis can be found in the scoary directory - see run_scoary.sh
-2. [Poppunk](https://poppunk.readthedocs.io/en/latest/) Analysis can be found in poppunk directory - see run_poppunk.sh. The s aureus reference database was taken from [here](https://www.bacpop.org/poppunk/).
+1. [Scoary](https://github.com/AdmiralenOla/Scoary) analysis can be found in the scoary directory - see run_scoary.sh, you will need to install panaroo and scoary.
+2. [Poppunk](https://poppunk.readthedocs.io/en/latest/) Analysis can be found in poppunk directory - see run_poppunk.sh. The s aureus reference database was taken from [here](https://www.bacpop.org/poppunk/). You will need to install poppunk. 
 
 
 Plasmid Snakemake Pipleine
@@ -102,15 +111,15 @@ Structural_Locus_Deep_Dive
 
 Arguably the nicest aspect of this manuscript :) - the deep dive into the strucutral changes in the sdrCDE locus of patient 420 and the beta-lactamase locus of patient 4875.
 
-To re-create the gviz plots (Figure 2B, D, F), you will need to first download the relevant long read FASTQs off the SRA and move into the Structural_Locus_Deep_Dive/sdrd_blaz_gviz directory.
+To re-create the gviz plots (Figure 2B, D, F), you will need to first download the relevant long read FASTQs off the SRA and move into the Structural_Locus_Deep_Dive/sdrd_blaz_gviz directory, and make sure [filtlong](), minimap2 and samtools are available (see map_reads.sh). Then you need to:
 
 1. Run map_reads.sh
 2. Run create_gviz_plots.R - the pileup plots were created with [gviz](https://bioconductor.org/packages/release/bioc/html/Gviz.html).
 
-To re-create the gggenomes plots (Figure 2A, C), move into the Structural_Locus_Deep_Dive directory
+To re-create the gggenomes plots (Figure 2A, C), move into the Structural_Locus_Deep_Dive directory and then:
 
 1. Run locus_extract.sh to extract the relevant regions. These have been included and annotated - you can use run_bakta.sh to do that again if you would like. 
-2. Run gggenomes.R
+2. Run gggenomes.R - plots were created with [gggenomes](https://github.com/thackl/gggenomes) - I note this was a bit tricky to install. 
 
 
 R Scripts
