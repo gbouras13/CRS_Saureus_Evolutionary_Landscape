@@ -1,0 +1,26 @@
+02/07/2023 12:37:33 PM    ==== Scoary started ====
+02/07/2023 12:37:33 PM    Command: /Users/a1667917/mambaforge/envs/scoary/bin/scoary -g panaroo_scoary_output/gene_presence_absence_roary.csv -t scoary_trait.csv
+02/07/2023 12:37:33 PM    Reading gene presence absence file
+02/07/2023 12:37:33 PM    Creating Hamming distance matrix based on gene presence/absence
+02/07/2023 12:37:33 PM    Building UPGMA tree from distance matrix
+02/07/2023 12:37:33 PM    Reading traits file
+02/07/2023 12:37:33 PM    Finished loading files into memory.
+
+
+02/07/2023 12:37:33 PM    ==== Performing statistics ====
+02/07/2023 12:37:33 PM    -- Filtration options --
+02/07/2023 12:37:33 PM    Individual (Naive):    0.05
+02/07/2023 12:37:33 PM    Collapse genes:    False
+
+
+02/07/2023 12:37:33 PM    Tallying genes and performing statistical analyses
+02/07/2023 12:37:33 PM    Gene-wise counting and Fisher's exact tests for trait: Same_Strain
+02/07/2023 12:37:34 PM    Adding p-values adjusted for testing multiple hypotheses
+02/07/2023 12:37:34 PM    Storing results: Same_Strain
+02/07/2023 12:37:34 PM    Calculating max number of contrasting pairs for each nominally significant gene
+02/07/2023 12:37:34 PM    Storing results to file
+02/07/2023 12:37:34 PM    
+
+02/07/2023 12:37:34 PM    ==== Finished ====
+02/07/2023 12:37:34 PM    Checked a total of 3850 genes for associations to 1 trait(s). Total time used: 0 seconds.
+02/07/2023 12:37:34 PM    No warnings were recorded.

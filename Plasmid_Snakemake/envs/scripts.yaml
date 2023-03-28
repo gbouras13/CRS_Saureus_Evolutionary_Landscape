@@ -1,0 +1,10 @@
+name: assemble
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - pandas
+    - numpy
+    - biopython
+    - scikit-learn

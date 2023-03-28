@@ -1,0 +1,19 @@
+##################
+# Run Parameters #
+##################
+
+min_chrom_length: 2300000
+Medaka: True
+min_length: 1500
+min_quality: 9
+Staph: True
+
+
+
+BigJobMem: 32000     
+BigJobCpu: 64       
+SmallJobMem: 4000
+
+#Corealn: '/hpcfs/users/a1667917/S_Aureus_Analysis_Pipeline/core_gene_alignment.aln'
+BaktaDB: '/hpcfs/users/a1667917/bakta_db/db'
+

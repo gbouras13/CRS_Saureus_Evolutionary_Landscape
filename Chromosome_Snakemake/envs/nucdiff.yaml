@@ -1,0 +1,7 @@
+name: snippy
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - nucdiff

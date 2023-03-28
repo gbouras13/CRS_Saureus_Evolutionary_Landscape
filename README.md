@@ -7,8 +7,13 @@ Table of Contents
 -----------
 - [Assemblies](#Assemblies)
 - [Chromosome Analysis Snakemake Pipeline](#Chromosome_Analysis_Snakemake_Pipeline)
-
+- [Other Miscellaneous Bioinformatics Scripts](#Other_Miscellaneous_Bioinformatics_Scripts)
+- [Plasmid Snakemake Pipleine](#Plasmid_Snakemake_Pipleine)
+- [Structural Locus Deep Dive](#Structural_Locus_Deep_Dive)
+- [R Scripts](#R_Scripts)
 - [Citation](#citation)
+- [Issues](#issues)
+
 
 
 Assemblies
@@ -16,14 +21,12 @@ Assemblies
 
 It is assumed you are using the assembled chromosome and plasmid assemblies that can be found in [PRJNA914892](https://www.ncbi.nlm.nih.gov/bioproject/914892) and also in this repository. A full list of isolates, Biosample numbers and associated metadata (particularly time-points), can be found in Supplementary Table 1. 
 
-If you would like to recreate the assemblies, they were created with a hybrid bacterial assembly pipleine that has been formalised in a command line tool called [hybracter](https://github.com/gbouras13/hybracter). Please see the hybracter [repository](https://github.com/gbouras13/hybracter) for more details. 
+If you would like to recreate the assemblies, they were created with a hybrid bacterial assembly pipleine that has been formalised in a [Snaketool](https://github.com/beardymcjohnface/Snaketool) powered command line tool called [hybracter](https://github.com/gbouras13/hybracter). Please see the hybracter [repository](https://github.com/gbouras13/hybracter) for more details. 
 
 Hybracter was run as follows:
 
 ```
-
 hybracter run --input metadata.csv --output CRS_landscape_assemblies_out --threads 16
-
 ```
 
 Where metadata.csv contains the paths to all 68 isolate long & short read FASTQ files as follows (2500000 being the lower bound for S aureus chromosome size):
@@ -31,7 +34,6 @@ Where metadata.csv contains the paths to all 68 isolate long & short read FASTQ 
 C1,C1_long_read.fastq.gz,2500000,C1_short_R1.fastq.gz,C1_short_R2.fastq.gz 
 
 These can be downloaded from the SRA. 
-
 
 Chromosome Analysis Snakemake Pipeline
 -----------
@@ -51,19 +53,110 @@ The following analyses were conducted:
 1. [Snippy](https://github.com/tseemann/snippy) was run on the T1 isolate short reads vs the T0 isolate chromosome gbk for each pair to delete SNPs.
 2. [Nucdiff](https://github.com/uio-cels/NucDiff) was run on the T1 isolate chromosome assembly  vs the T0 isolate chromosome assembly for each pair to detect strucutral variants.
 3. [MLST](https://github.com/tseemann/mlst) was run on the T1 isolate chromosome assembly  vs the T0 isolate chromosome assembly for each pair.
-4. [ISEScan](https://github.com/xiezhq/ISEScan) was run on all isolates
-5. [Panaroo](https://github.com/gtonkinhill/panaroo) was run on all isolates gff files to create a pan-genome
+4. [ISEScan](https://github.com/xiezhq/ISEScan) was run on all isolates.
+5. [Panaroo](https://github.com/gtonkinhill/panaroo) was run on all isolates gff files to create a pan-genome.
 6. [Abricate](https://github.com/tseemann/abricate) was run on all isolates to detect AMR and virulence factor genes. 
 7. [Sniffles](https://github.com/fritzsedlazeck/Sniffles) was run on the T1 long reads  vs the T0 isolate chromosome assembly for each pair to detect strucutral variants.
 8. [PhiSpy](https://github.com/linsalrob/PhiSpy) was run on each chromosome assemlby to predict prophages in each isolate.
 
+Not all of these analyses made it into the paper in the end. 
 
-To re-run these analyses, ensure you are in the Chromosome_Snakemake directory and make sure the paths to the long and short read FASTQ files (from the SRA) are changed in metadata.csv, then run:
+To re-run these analyses, ensure you are in the Chromosome_Snakemake directory with Snakemake available (best as a conda environment) and make sure the paths to the long and short read FASTQ files (from the SRA) are changed in metadata.csv, then run:
 
 ```
-snakemake -c <cores> -s runner.smk --use-conda  --conda-frontend conda  \
---config csv=metadata.csv Output=Chromosome_Analysis_Output
+snakemake -c <cores> -s runner.smk --use-conda   \
+--config csv=metadata.csv Output=Snakemake_Output
 ```
 
+
+Other Miscellaneous Bioinformatics Scripts
+---------
+
+There are a couple of other miscellaneous scripts that are not in the Snakemake pipleine (had some trouble with HPC installs!)
+
+1. [Scoary](https://github.com/AdmiralenOla/Scoary) analysis can be found in the scoary directory - see run_scoary.sh
+2. [Poppunk](https://poppunk.readthedocs.io/en/latest/) Analysis can be found in poppunk directory - see run_poppunk.sh. The s aureus reference database was taken from [here](https://www.bacpop.org/poppunk/).
+
+
+Plasmid Snakemake Pipleine
+---------
+
+The section forms the plasmid analysis conducted for the manuscript. The Snakemake pipeline can be found in teh Plasmid_Snakemake directory.
+
+All plasmids were assembled using [Plassembler](https://github.com/gbouras13/plassembler) v 0.1.3.
+
+To run these analyses, please ensure you are in the Plasmid_Snakemake directory with Snakemake available (best as a conda environment) and run
+
+```
+snakemake -c 1 -s plasmid_runner.smk --use-conda   \
+--config Input=../PLASMID_FASTAS Output=../Plasmid_Snakemake_Out
+```
+
+The following analyses were conducted:
+
+1. [Bakta](https://github.com/oschwengers/bakta) was run to annotate all plasmids.
+2. [Panaroo](https://github.com/gtonkinhill/panaroo) was run on all isolates gff files to create a pan-genome.
+3. [Abricate](https://github.com/tseemann/abricate) was run on all plasmids to detect AMR and virulence factor genes. 
+4. [Mash](https://github.com/tseemann/mlst) distance matrix was calculated between all plasmid contigs. 
+5. Jaccard distances matrix was calculated between all plasmid contigs based on gene present absence.
+
+Structural_Locus_Deep_Dive
+-------------------
+
+Arguably the nicest aspect of this manuscript :) - the deep dive into the strucutral changes in the sdrCDE locus of patient 420 and the beta-lactamase locus of patient 4875.
+
+To re-create the gviz plots (Figure 2B, D, F), you will need to first download the relevant long read FASTQs off the SRA and move into the Structural_Locus_Deep_Dive/sdrd_blaz_gviz directory.
+
+1. Run map_reads.sh
+2. Run create_gviz_plots.R - the pileup plots were created with [gviz](https://bioconductor.org/packages/release/bioc/html/Gviz.html).
+
+To re-create the gggenomes plots (Figure 2A, C), move into the Structural_Locus_Deep_Dive directory
+
+1. Run locus_extract.sh to extract the relevant regions. These have been included and annotated - you can use run_bakta.sh to do that again if you would like. 
+2. Run gggenomes.R
+
+
+R Scripts
+---------
+
+Post processing was done in R and can be found in R/ directory.
+
+The scripts do the following functions:
+
+* snp_vs_struct_count.R - calculated the number of SNPs vs larger structural changes (Table 2).
+* plasmid_blaz_determination.R - determine which plasmids carry beta-lactamase 
+* parse_snps_gffs.R - parsing Snippy output
+* parse_nucdiff_gffs.R - parses nucdiff analysis 
+* mash_jaccard_plasmid_analysis.R and plasmid_heatmap.R - aggregated mash and Jaccard plasmid analysis, creates heatmap (Fig 3) 
+* biofilm_tolerance.R - Fig 5
+* biomass.R - Fig 6
+* heatmaps.R - Figs S1 and S2
+* medication.R - Fig S6 
+* tree.R - Fig 1A
+* snps.R - Fig 1B
+* planktonic_graph.R - Fig S5
+* plasmid_copy_numbers.R - plasmid copy number analysis Fig 4 & (Fig S4)
+* biofilm_vs_copy_number.R - correlated bioliflm with plasmid copy number 
+
+Metadata
+-----------
+
+All metadata can be found in the metadata directory.
+
+* biofilm_data.csv - biolfilm metabolic activity data
+* poppunk_mlst.csv - summarised file of MLST and Poppunk clusters
+* plassembler_copy_number.csv - summarised file of all plassembler copy numbers
+* metadata_phylogentic_tree.csv - metadata for Figure 1A
+* gess_time.csv - Links the host (patient) id with Time and isolate numbers.
+
+Citation
+------------
+
+Coming soon :) If you find any of this code useful for your research, feel free to use - but please cite the pre-print!
+
+Issues
+-----------
+
+If you want some more clarification on some of these scripts (particularly if anything doesn't work - quite likely!) please raise an issue.
 
 

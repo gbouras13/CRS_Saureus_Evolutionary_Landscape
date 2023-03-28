@@ -1,0 +1,8 @@
+name: snippy
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - snippy
+    - snpEff=5.0
