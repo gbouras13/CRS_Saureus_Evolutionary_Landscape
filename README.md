@@ -1,7 +1,6 @@
 CRS_Saureus_Evolutionary_Landscape
 ====================================
-This repository holds the code base for Houtak et al, 'The Intra-Host Evolutionary Landscape And Pathoadaptation Of Persistent *Staphylococcus aureus* In Chronic Rhinosinusitis' (doi TBA).
-------------------------------
+This repository holds the code base for Houtak & Bouras et al, 'The Intra-Host Evolutionary Landscape And Pathoadaptation Of Persistent *Staphylococcus aureus* In Chronic Rhinosinusitis' (doi TBA). It was a combined effort with @ghs101 who lead the project. If you find any of this code useful for your research, feel free to copy, use or modify - but please cite the pre-print!
 
 Table of Contents
 -----------
@@ -13,8 +12,6 @@ Table of Contents
 - [R Scripts](#R_Scripts)
 - [Citation](#citation)
 - [Issues](#issues)
-
-
 
 Assemblies
 -----------
@@ -152,7 +149,7 @@ All metadata can be found in the metadata directory.
 Citation
 ------------
 
-Coming soon :) If you find any of this code useful for your research, feel free to use - but please cite the pre-print!
+Coming soon :) 
 
 Issues
 -----------
