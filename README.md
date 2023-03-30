@@ -4,11 +4,11 @@ CRS_Saureus_Evolutionary_Landscape
 Introduction
 --------------------
 
-This repository holds the code base for Houtak & Bouras et al, 'The Intra-Host Evolutionary Landscape And Pathoadaptation Of Persistent *Staphylococcus aureus* In Chronic Rhinosinusitis' (doi TBA). 
+This repository holds the code base for Houtak & Bouras et al, 'The Intra-Host Evolutionary Landscape And Pathoadaptation Of Persistent *Staphylococcus aureus* In Chronic Rhinosinusitis' available on bioRxiv [here](https://doi.org/10.1101/2023.03.28.534496). 
 
 This was a combined effort with [ghs101](https://github.com/ghs101), who lead the project. If you find any of this code useful for your research, feel free to copy, use or modify - but please cite the pre-print!
 
-You will need to have conda & snakemake installed to run the bulk of the analysis - the environments in the snakemake pipelines should automatically install. I have not included detailed installation instructions for the miscellaneous scripts or the structural locus deep dive - the instructions are contained in the relevant shell scripts (simple conda environments are recommended). For R, there are no installation instructions, but any package not found on CRAN or Bioconductor will have detailed installation instructions commented out (e.g. gggenomes) in the relevant script.   
+You will need to have conda & snakemake installed to run the bulk of the analysis - the environments in the snakemake pipelines should automatically install. I have not included detailed installation instructions for the miscellaneous scripts or the structural locus deep dive - the instructions are contained in the relevant shell scripts (simple conda environments are recommended). For R, there are no installation instructions, but any package not found on CRAN or Bioconductor will have detailed installation instructions commented out (e.g. gggenomes) in the relevant script.
 
 Table of Contents
 -----------
@@ -44,7 +44,7 @@ These can be downloaded from the SRA.
 Chromosome Analysis Snakemake Pipeline
 -----------
 
-The section forms the bulk of the analysis conducted for the manuscript. The Snakemake pipeline can be found in teh Chromosome_Snakemake directory.
+The section forms the bulk of the analysis conducted for the manuscript. The Snakemake pipeline can be found in the Chromosome_Snakemake directory.
 
 Before this, all chromosome assemblies were annotated with bakta (not included in this repository as the scripts are part of a larger project) using e.g. for C1, where C1.fasta is the chromosome assembly from hybracter:
 
@@ -87,7 +87,7 @@ There are a couple of other miscellaneous scripts that are not in the Snakemake 
 Plasmid Snakemake Pipleine
 ---------
 
-The section forms the plasmid analysis conducted for the manuscript. The Snakemake pipeline can be found in teh Plasmid_Snakemake directory.
+The section forms the plasmid analysis conducted for the manuscript. The Snakemake pipeline can be found in the Plasmid_Snakemake directory.
 
 All plasmids were assembled using [Plassembler](https://github.com/gbouras13/plassembler) v 0.1.3.
 
@@ -158,7 +158,9 @@ All metadata can be found in the metadata directory.
 Citation
 ------------
 
-Coming soon :) 
+The Intra-Host Evolutionary Landscape And Pathoadaptation Of Persistent Staphylococcus aureus In Chronic Rhinosinusitis
+Ghais Houtak, George Bouras, Roshan Nepal, Gohar Shaghayegh, Clare Cooksley, Alkis James Psaltis, Peter-John Wormald, Sarah Vreugde
+bioRxiv 2023.03.28.534496; doi: [https://doi.org/10.1101/2023.03.28.534496](https://doi.org/10.1101/2023.03.28.534496)
 
 Issues
 -----------
