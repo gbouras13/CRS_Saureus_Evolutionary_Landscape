@@ -12,15 +12,19 @@ You will need to have conda & snakemake installed to run the bulk of the analysi
 
 Table of Contents
 -----------
-- [Introduction](#Introduction)
-- [Assemblies](#Assemblies)
-- [Chromosome Analysis Snakemake Pipeline](#Chromosome_Analysis_Snakemake_Pipeline)
-- [Other Miscellaneous Bioinformatics Scripts](#Other_Miscellaneous_Bioinformatics_Scripts)
-- [Plasmid Snakemake Pipleine](#Plasmid_Snakemake_Pipleine)
-- [Structural Locus Deep Dive](#Structural_Locus_Deep_Dive)
-- [R Scripts](#R_Scripts)
-- [Citation](#citation)
-- [Issues](#issues)
+- [CRS\_Saureus\_Evolutionary\_Landscape](#crs_saureus_evolutionary_landscape)
+  - [Introduction](#introduction)
+  - [Table of Contents](#table-of-contents)
+  - [Assemblies](#assemblies)
+  - [Chromosome Analysis](#chromosome-analysis)
+  - [Chromosome - Other Miscellaneous Bioinformatics Scripts](#chromosome---other-miscellaneous-bioinformatics-scripts)
+  - [Plasmid Snakemake Pipeline](#plasmid-snakemake-pipeline)
+  - [Structural\_Locus\_Deep\_Dive](#structural_locus_deep_dive)
+  - [R Scripts for Plotting etc](#r-scripts-for-plotting-etc)
+  - [Metadata](#metadata)
+  - [Codon Bias and GC Content](#codon-bias-and-gc-content)
+  - [Citation](#citation)
+  - [Issues](#issues)
 
 Assemblies
 -----------
@@ -168,6 +172,11 @@ All metadata can be found in the metadata directory.
 * plassembler_copy_number.csv - summarised file of all plassembler copy numbers
 * metadata_phylogentic_tree.csv - metadata for Figure 1A
 * gess_time.csv - Links the host (patient) id with Time and isolate numbers.
+
+Codon Bias and GC Content
+-----------
+
+Scripts (`calc_codon_bias.py` and `calc_gc.py`) that crudely estimate the ratio of non-synonymous to synonymous nucleotide changes and GC content for MSCRAMM and non-MSCRAMM genes are contained in the `mscramm_codon_bias` directory. These require `biopython` to be installed (`conda install biopython`).
 
 Citation
 ------------
