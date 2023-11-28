@@ -183,7 +183,7 @@ Citation
 
 The Intra-Host Evolutionary Landscape And Pathoadaptation Of Persistent Staphylococcus aureus In Chronic Rhinosinusitis
 Ghais Houtak, George Bouras, Roshan Nepal, Gohar Shaghayegh, Clare Cooksley, Alkis James Psaltis, Peter-John Wormald, Sarah Vreugde
-_Microbial Genomics_ (2023) Volume 9, Issue 11; doi: [https://doi.org/10.1099/mgen.0.001128]https://doi.org/10.1099/mgen.0.001128).
+_Microbial Genomics_ (2023) Volume 9, Issue 11; doi: [https://doi.org/10.1099/mgen.0.001128](https://doi.org/10.1099/mgen.0.001128).
 
 Issues
 -----------
