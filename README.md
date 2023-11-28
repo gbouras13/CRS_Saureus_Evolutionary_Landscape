@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/620107316.svg)](https://zenodo.org/doi/10.5281/zenodo.10212218)
+
 CRS_Saureus_Evolutionary_Landscape
 ====================================
 
