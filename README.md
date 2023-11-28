@@ -8,7 +8,7 @@ This repository holds the code base for Houtak & Bouras et al, 'The Intra-Host E
 
 This was a combined effort with [ghs101](https://github.com/ghs101), who lead the project. If you find any of this code useful for your research, feel free to copy, use or modify - but please cite the pre-print!
 
-You will need to have conda & snakemake installed to run the bulk of the analysis - the conda environments in the snakemake pipelines should automatically install. I have not included detailed installation instructions for the miscellaneous scripts in the structural locus deep dive - the instructions are contained in the relevant shell scripts (simple conda environments are recommended). For R scripts, there are no installation instructions, but any package not found on CRAN or Bioconductor will have detailed installation instructions commented out (e.g. gggenomes) in the relevant script.
+You will need to have conda/mamba (for some help with installation read [this](https://dnaapler.readthedocs.io/en/latest/install/#beginner-conda-installation)) & snakemake installed to run the bulk of the analysis - the conda environments in the snakemake pipelines should automatically install. I have not included detailed installation instructions for the miscellaneous scripts in the structural locus deep dive - the instructions are contained in the relevant shell scripts (simple conda environments are recommended). For R scripts, there are no installation instructions, but any package not found on CRAN or Bioconductor will have detailed installation instructions commented out (e.g. gggenomes) in the relevant script.
 
 Table of Contents
 -----------
