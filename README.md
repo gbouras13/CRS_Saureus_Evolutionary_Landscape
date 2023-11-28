@@ -4,7 +4,7 @@ CRS_Saureus_Evolutionary_Landscape
 Introduction
 --------------------
 
-This repository holds the code base for Houtak & Bouras et al, 'The Intra-Host Evolutionary Landscape And Pathoadaptation Of Persistent *Staphylococcus aureus* In Chronic Rhinosinusitis' available on bioRxiv [here](https://doi.org/10.1101/2023.03.28.534496).
+This repository holds the code base for Houtak & Bouras et al, 'The Intra-Host Evolutionary Landscape And Pathoadaptation Of Persistent *Staphylococcus aureus* In Chronic Rhinosinusitis' published in _Microbial Genomics_ [here](https://doi.org/10.1099/mgen.0.001128).
 
 This was a combined effort with [ghs101](https://github.com/ghs101), who lead the project. If you find any of this code useful for your research, feel free to copy, use or modify - but please cite the pre-print!
 
@@ -183,7 +183,7 @@ Citation
 
 The Intra-Host Evolutionary Landscape And Pathoadaptation Of Persistent Staphylococcus aureus In Chronic Rhinosinusitis
 Ghais Houtak, George Bouras, Roshan Nepal, Gohar Shaghayegh, Clare Cooksley, Alkis James Psaltis, Peter-John Wormald, Sarah Vreugde
-bioRxiv 2023.03.28.534496; doi: [https://doi.org/10.1101/2023.03.28.534496](https://doi.org/10.1101/2023.03.28.534496)
+_Microbial Genomics_ (2023) Volume 9, Issue 11; doi: [https://doi.org/10.1099/mgen.0.001128]https://doi.org/10.1099/mgen.0.001128).
 
 Issues
 -----------
