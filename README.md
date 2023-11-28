@@ -34,9 +34,15 @@ Assemblies
 </p>
 
 
-It is assumed you are using the assembled chromosome and plasmid assemblies that can be found in [PRJNA914892](https://www.ncbi.nlm.nih.gov/bioproject/914892) and also in this repository. A full list of isolates, Biosample numbers and associated metadata (particularly time-points), can be found in Supplementary Table 1.
+It is assumed you are using the assembled chromosome and plasmid assemblies that can be found in [PRJNA914892](https://www.ncbi.nlm.nih.gov/bioproject/914892) and also in this repository. A full list of isolates, Biosample numbers and associated metadata (particularly time-points), can be found in Supplementary Table 1 of the [paper](https://doi.org/10.1099/mgen.0.001128) .
 
-If you would like to recreate the assemblies, they were created with a hybrid bacterial assembly pipleine that has been formalised in a [Snaketool](https://github.com/beardymcjohnface/Snaketool) powered command line tool called [hybracter](https://github.com/gbouras13/hybracter). Please see the hybracter [repository](https://github.com/gbouras13/hybracter) for more details.
+If you would like to recreate the assemblies, they were created with a hybrid bacterial assembly pipleine that has been formalised in a [Snaketool](https://github.com/beardymcjohnface/Snaketool) powered command line tool called [hybracter](https://github.com/gbouras13/hybracter). 
+
+Please see the hybracter [repository](https://github.com/gbouras13/hybracter) for more details.
+
+Just as a warning note, essentially every genome assembler is non-deterministic (see this [post](https://plassembler.readthedocs.io/en/latest/flye_non_determinism/) for some more details particularly regarding Flye). Hybracter has also been improved and modified since it was run for this study (see the [paper](https://doi.org/10.1099/mgen.0.001128) for full version details of the constituent tools). 
+
+tldr: You should obtain substantially the same assemblies as generated in for the manuscript, but not identical. 
 
 Hybracter was run as follows:
 
@@ -44,11 +50,20 @@ Hybracter was run as follows:
 hybracter run --input metadata.csv --output CRS_landscape_assemblies_out --threads 16
 ```
 
-Where metadata.csv contains the paths to all 68 isolate long & short read FASTQ files as follows (2500000 being the lower bound for S aureus chromosome size):
+Where `metadata.csv` contains the paths on your system to all 68 matched long & short read FASTQ files as follows (2500000 being the lower bound for _S. aureus_ chromosome size):
 
+```
 C1,C1_long_read.fastq.gz,2500000,C1_short_R1.fastq.gz,C1_short_R2.fastq.gz
+```
 
-These can be downloaded from the SRA.
+These can be downloaded from the SRA. I like to use the marvellous [fastq-dl](https://github.com/rpetit3/fastq-dl) program.
+
+e.g.
+
+```
+fastq-dl --cpus 8  -a PRJNA914892
+```
+
 
 Chromosome Analysis
 -----------
@@ -57,9 +72,9 @@ Chromosome Analysis
   <img src="img/Chromosome_Workflow.png" alt="Chromosome Workflow" height=600>
 </p>
 
-The section forms the bulk of the analysis conducted for the manuscript. The Snakemake pipeline can be found in the Chromosome_Snakemake directory.
+The section forms the bulk of the analysis conducted for the manuscript. The Snakemake pipeline can be found in the `Chromosome_Snakemake` directory.
 
-Before this, all chromosome assemblies were annotated with bakta (not included in this repository as the scripts are part of a larger project) using e.g. for C1, where C1.fasta is the chromosome assembly from hybracter:
+Before this, all chromosome assemblies were annotated with [bakta](https://github.com/oschwengers/bakta) (not included in this repository as the scripts are part of a larger project). You can replicate these as follows: e.g. for C1, where C1.fasta is the chromosome assembly from hybracter:
 
 ```
 bakta --db bakta_db --verbose --output C1 --prefix C1 --locus-tag C1 --threads 8 C1.fasta
@@ -80,7 +95,7 @@ The following analyses were conducted:
 
 Not all of these analyses made it into the paper in the end (namely PhiSpy and ISEScan).
 
-To re-run these analyses, ensure you are in the Chromosome_Snakemake directory with Snakemake available (preferably in a conda environment) and make sure the paths to the long and short read FASTQ files (from the SRA) are changed in metadata.csv, then run:
+To re-run these analyses, ensure you are in the Chromosome_Snakemake directory with Snakemake available ( in a conda environment) and make sure the paths to the long and short read FASTQ files (from the SRA) are changed in metadata.csv, then run:
 
 ```
 snakemake -c <cores> -s runner.smk --use-conda   \
@@ -91,10 +106,10 @@ snakemake -c <cores> -s runner.smk --use-conda   \
 Chromosome - Other Miscellaneous Bioinformatics Scripts
 ---------
 
-There are a couple of other miscellaneous scripts that are not in the Snakemake pipeline (had some trouble with HPC installs!)
+There are a couple of other miscellaneous scripts that are not in the Snakemake pipeline (had some trouble with HPC installs at the time or I would've added them in too!)
 
-1. [Scoary](https://github.com/AdmiralenOla/Scoary) analysis can be found in the scoary directory - see run_scoary.sh, you will need to install panaroo and scoary.
-2. [PopPUNK](https://poppunk.readthedocs.io/en/latest/) Analysis can be found in poppunk directory - see run_poppunk.sh. The s aureus reference database was taken from [here](https://www.bacpop.org/poppunk/). You will need to install poppunk.
+1. [Scoary](https://github.com/AdmiralenOla/Scoary) analysis code can be found in the scoary directory - see run_scoary.sh, you will need to install panaroo and scoary (I'd recommend mamba).
+2. [PopPUNK](https://poppunk.readthedocs.io/en/latest/) analysis code can be found in poppunk directory - see run_poppunk.sh. The s aureus reference database was taken from [here](https://www.bacpop.org/poppunk/). You will need to install poppunk (I'd recommend mamba).
 
 
 Plasmid Snakemake Pipeline
@@ -176,7 +191,7 @@ All metadata can be found in the metadata directory.
 Codon Bias and GC Content
 -----------
 
-Scripts (`calc_codon_bias.py` and `calc_gc.py`) that crudely estimate the ratio of non-synonymous to synonymous nucleotide changes and GC content for MSCRAMM and non-MSCRAMM genes are contained in the `mscramm_codon_bias` directory. These require `biopython` to be installed (`conda install biopython`).
+Scripts (`calc_codon_bias.py` and `calc_gc.py`) that crudely estimate the ratio of non-synonymous to synonymous nucleotide changes and GC content for MSCRAMM and non-MSCRAMM genes are contained in the `mscramm_codon_bias` directory. These require `biopython` to be installed (`pip install biopython`).
 
 Citation
 ------------
